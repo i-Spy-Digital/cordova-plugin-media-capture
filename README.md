@@ -349,6 +349,11 @@ capturing a video clip, the `CaptureErrorCB` callback executes with a
 ### iOS Quirks
 
 - The `limit` parameter is not supported, so only one recording can be created for each invocation.
+- iOS supports an additional __quality__ property, to allow capturing video at different qualities.  A value of `1` means high quality, a value of `0.5` ( the default ) means medium quality and    value of `0` means low quality, suitable for MMS messages.
+ See [here](https://developer.apple.com/reference/uikit/uiimagepickercontrollerqualitytype?language=objc) for more details.
+ A value of `0` corresponds to UIImagePickerControllerQualityTypeLow.
+ A value of `0.5` corresponds to UIImagePickerControllerQualityTypeMedium (the default value of the [UIImagePickerController.videoQuality](https://developer.apple.com/reference/uikit/uiimagepickercontroller/1619154-videoquality?language=objc) property).
+ A value of `1` corresponds to UIImagePickerControllerQualityTypeHigh.
 
 
 ## CaptureImageOptions
@@ -380,6 +385,8 @@ capturing a video clip, the `CaptureErrorCB` callback executes with a
 - __limit__: The maximum number of video clips the device's user can capture in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
 
 - __duration__: The maximum duration of a video clip, in seconds.
+
+- __quality__: The quality of the video clip, specified as a float.  `0=low`, `0.5=medium` (the default) and `1=high`.
 
 ### Example
 
