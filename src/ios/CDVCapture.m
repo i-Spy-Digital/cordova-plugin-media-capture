@@ -267,9 +267,9 @@
             // pickerController.videoQuality = UIImagePickerControllerQualityTypeHigh;
             if (quality && [quality floatValue] == 0) {
                 pickerController.videoQuality = UIImagePickerControllerQualityTypeLow;
-            } else if (qulaity && [quality floatValue] == 0.5) {
+            } else if (quality && [quality floatValue] == 0.5) {
                 pickerController.videoQuality = UIImagePickerControllerQualityTypeMedium;
-            } else if (qulaity && [quality floatValue] == 1) {
+            } else if (quality && [quality floatValue] == 1) {
                 pickerController.videoQuality = UIImagePickerControllerQualityTypeHigh;
             }
             // pickerController.cameraDevice = UIImagePickerControllerCameraDeviceRear;
